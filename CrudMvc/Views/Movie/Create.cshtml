@@ -1,0 +1,25 @@
+﻿@model MovieCreateViewModel
+
+
+<form asp-controller="Movie" asp-action="create" method="post">
+
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+
+    <div>
+        <label asp-for="Genre"></label>
+        <input asp-for="Genre" />
+        <span class="text-danger" asp-validation-for="Genre"></span>
+    </div>
+    <button class="btn-primary" type="submit">Create</button>
+
+</form>

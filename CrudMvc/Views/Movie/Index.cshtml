@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MovieListViewModel>
+
+<a asp-area="" asp-controller="Movie" asp-action="Create">Add movie</a>
+<h1>Movies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:300px">Title</th>
+                <th>Description</th>
+            </tr>         
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
